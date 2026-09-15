@@ -90,3 +90,50 @@
 - **Billing Instrumentation:** Outcome-based logging engines (e.g., Zendesk resolution meters).
 - **Gateway Guardrails:** TrueFoundry spend limit controls.
 - **Modeling & Simulation:** DoubleML elasticity frameworks, shadow-mode pricing scenario simulators.
+
+### 1. The Context Manager (Designed Prompt & Perception)
+
+- **Role:** Acts as the foundational boundary-setter and input processor.
+- **Responsibilities:** Ingests the user's "Task Instruction" and enriches it with structural context, including the "System Description," "Tool Description," "Few-shot Demonstration," and prior "History/Memory." The LLM (Perception Ability) then interprets this aggregate data.
+- **Checks and Balances:**
+
+- Restricts the agent's universe of possibilities by explicitly defining the allowed tools and operational boundaries before any action is taken.
+- To prevent the agent from overflowing its context window with unstructured past interactions, systems should upgrade the "History/Memory" module to include dynamic context retrieval, ensuring only relevant historical context is loaded      .
+
+### 2. The Architect (Task Planning Ability)
+
+- **Role:** Decomposes complex user requests into executable steps.
+- **Responsibilities:** Translates the perceived intent into "High-level Plans" by breaking the work down into sequential steps ("Subtask 1," "Subtask 2," ... "Subtask N").
+- **Checks and Balances:**
+
+- Provides granular state tracking by establishing step-by-step logic.
+- For effective validation, the system must ensure that dependencies are correctly identified (e.g., Subtask 2 inherently waits for the calculated output of Subtask 1)      . If a subtask fails, the system should halt and reflect rather than blindly attempting the next step      .
+
+### 3. The Executor (Tool Usage Ability)
+
+- **Role:** Bridges the gap between language generation and external system execution.
+- **Responsibilities:** Manages the "Selection + Creation + Execution" of tools. It routes subtasks to a predefined "Tool Set" (e.g., `Database()`, `Calculator()`, `PythonREPL()`) or dynamically creates new tools (e.g., generating SQL or Python code).
+- **Checks and Balances:**
+
+- Executing newly generated code or tools directly in a live environment is risky      . A critical check is introducing a sandboxed testing environment to validate the safety and functionality of generated scripts (like Python or SQL) before they interact with live databases      .
+- Implementation of syntax linters and read-only permissions helps validate that the code is syntactically correct and non-destructive before final execution      .
+
+### 4. The Auditor (Learning, Reflection, and Memory Ability)
+
+- **Role:** Functions as the internal QA and self-correction engine.
+- **Responsibilities:** Evaluates the output of the tool execution to determine if it yielded a "Correct Result or Exception Error."
+- **Checks and Balances:**
+
+- This is the primary feedback loop. Instead of crashing or infinitely looping upon hitting an error, the system's "Reflection Ability" triggers, logs the failure to memory, and attempts an alternative subtask route      .
+- This explicit self-correction loop should automatically route errors back to the task planning or tool execution stages so the agent can re-plan or rewrite code without human intervention      .
+
+### 5. The Reporter (Summarization Ability)
+
+- **Role:** Synthesizes the final deliverable.
+- **Responsibilities:** Takes the raw data output from the final subtask and tool execution, consolidating it into a natural language "Final Answer."
+- **Checks and Balances:**
+
+- Ensures that the final output aligns exactly with the original "Task Instruction."
+- Validating this stage involves comparing the raw data against the natural language output to ensure the summarization does not hallucinate additional metrics or drop critical context      .
+
+  
