@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyst Report 2026: Agentic Commerce SPA Infographic</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            accent: {
+              emerald: '#10b981',
+              amber: '#f59e0b',
+              purple: '#8b5cf6',
+              rose: '#f43f5e',
+              cyan: '#06b6d4',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .chart-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 320px;
+      max-height: 380px;
+    }
+    @media (min-width: 768px) {
+      .chart-container {
+        height: 350px;
+      }
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+  <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-3">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-accent-purple flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-brand-500/30">
+            🤖
+          </div>
+          <div>
+            <span class="text-xs uppercase tracking-widest text-brand-400 font-semibold block">Analyst Executive Brief 2026</span>
+            <h1 class="text-sm sm:text-base font-bold text-white tracking-tight">AI Agentic Commerce Framework</h1>
+          </div>
+        </div>
+        <nav class="hidden md:flex space-x-1 text-xs font-medium">
+          <a href="#kpi-summary" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">Market Impact</a>
+          <a href="#pillar-1" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">1. Discovery</a>
+          <a href="#pillar-2" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">2. Orchestration</a>
+          <a href="#pillar-3" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">3. Payments</a>
+          <a href="#pillar-4" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">4. KYA & Law</a>
+          <a href="#pillar-5" class="px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">5. Pricing</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <section class="relative rounded-3xl bg-gradient-to-br from-slate-800 via-slate-900 to-brand-900/60 p-8 sm:p-12 border border-slate-800 shadow-2xl overflow-hidden">
+      <div class="absolute -right-10 -bottom-10 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="relative z-10 max-w-3xl">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-300 text-xs font-semibold mb-6">
+          <span>⚡ 2026 Enterprise Transformation Report</span>
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+          Autonomous AI Agents Driving Commerce at Scale
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-8">
+          The shift from conversational copilots to autonomous multi-agent systems represents the most consequential reallocation of digital revenue streams since cloud migration. Discover the 5-pillar strategic roadmap mapping problem statements, enterprise execution horizons (6M, 1Y, 3Y), and technology enablement layers.
+        </p>
+      </div>
+
+      <div id="kpi-summary" class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-slate-800">
+        <div class="bg-slate-800/60 backdrop-blur rounded-2xl p-4 border border-slate-700/50">
+          <div class="text-2xl sm:text-3xl font-extrabold text-white mb-1">$3T - $5T</div>
+          <div class="text-xs text-slate-400 font-medium">Consumer Agent Commerce by 2030</div>
+        </div>
+        <div class="bg-slate-800/60 backdrop-blur rounded-2xl p-4 border border-slate-700/50">
+          <div class="text-2xl sm:text-3xl font-extrabold text-accent-emerald mb-1">$15 Trillion</div>
+          <div class="text-xs text-slate-400 font-medium">B2B Agent Procurement by 2028</div>
+        </div>
+        <div class="bg-slate-800/60 backdrop-blur rounded-2xl p-4 border border-slate-700/50">
+          <div class="text-2xl sm:text-3xl font-extrabold text-brand-400 mb-1">+4,700%</div>
+          <div class="text-xs text-slate-400 font-medium">YoY AI Retail Traffic Growth</div>
+        </div>
+        <div class="bg-slate-800/60 backdrop-blur rounded-2xl p-4 border border-slate-700/50">
+          <div class="text-2xl sm:text-3xl font-extrabold text-accent-purple mb-1">60% Fewer</div>
+          <div class="text-xs text-slate-400 font-medium">Multi-Agent Workflow Errors</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pillar-1" class="bg-slate-800/40 rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl space-y-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-700/60 pb-6">
+        <div>
+          <div class="inline-block px-3 py-1 rounded-lg bg-brand-500/20 text-brand-400 text-xs font-bold uppercase tracking-wider mb-2">Topic 01</div>
+          <h3 class="text-2xl font-bold text-white">Catalog Infrastructure, Discovery & Protocol Wars</h3>
+          <p class="text-slate-400 text-sm mt-1">Transitioning from fragile in-chat checkout to machine-readable protocol feeds.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-5 space-y-6">
+          <div class="bg-rose-950/30 rounded-2xl p-5 border border-rose-800/40">
+            <h4 class="text-xs font-bold text-rose-400 uppercase tracking-wider flex items-center gap-2 mb-2">
+              <span>⚠️ What (Problem Statement)</span>
+            </h4>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Early expectations of ubiquitous "in-chat checkout" failed due to severe conversion bottlenecks. OpenAI Instant Checkout (ACP) was discontinued in March 2026 after native in-chat checkouts converted at <strong class="text-white">one-third the rate (3x worse)</strong> of merchant site redirects. Unstructured web scraping caused hallucinated inventory and pricing, while 73% of e-commerce retailers lacked machine-readable feeds.
+            </p>
+          </div>
+
+          <div class="bg-slate-900/60 rounded-2xl p-5 border border-slate-700/60 space-y-4">
+            <h4 class="text-xs font-bold text-brand-400 uppercase tracking-wider">🛠️ Enablement Toolkit</h4>
+            <ul class="text-xs text-slate-300 space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="text-brand-400 font-bold">•</span>
+                <span><strong>Shopify Spring '26:</strong> Native Agentic Storefronts exposing auto-formatted feeds.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-brand-400 font-bold">•</span>
+                <span><strong>Model Context Protocol (MCP):</strong> Connective layer between LLMs and enterprise ERPs.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-brand-400 font-bold">•</span>
+                <span><strong>Adyen Agentic Gateway:</strong> Unified multi-standard adapter (UCP, ACP, Meta AI).</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6">
+          <div class="bg-slate-900/80 rounded-2xl p-5 border border-slate-700/60">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-sm font-semibold text-slate-200">Protocol & Channel Conversion Analytics</h4>
+              <span class="text-xs text-slate-400">Conversion Rate vs Readiness (%)</span>
+            </div>
+            <p class="text-xs text-slate-400 mb-4">
+              Native in-chat checkout suffered severe conversion drops compared to protocol-mediated embedded site checkouts (UCP/ECP).
+            </p>
+            <div class="chart-container">
+              <canvas id="chartCatalog"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-900/90 rounded-2xl p-6 border border-slate-700/60">
+        <h4 class="text-xs font-bold text-accent-emerald uppercase tracking-wider mb-4">🛣️ Company Resolution Roadmap (Path to Green)</h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+            <div class="text-xs font-bold text-brand-400 mb-1">6 MONTHS</div>
+            <div class="text-sm font-semibold text-white mb-2">Feed Structuring & UCP Manifests</div>
+            <p class="text-xs text-slate-300">Deploy machine-readable `/.well-known/ucp` JSON manifests. Integrate Embedded Checkout Protocol (ECP) for site handoffs.</p>
+          </div>
+          <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+            <div class="text-xs font-bold text-accent-amber mb-1">1 YEAR</div>
+            <div class="text-sm font-semibold text-white mb-2">Dynamic Negotiation & State Machines</div>
+            <p class="text-xs text-slate-300">Implement UCP Checkout State Machine (`incomplete` ➔ `requires_escalation` ➔ `ready_for_complete`) and split-shipment rules.</p>
+          </div>
+          <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+            <div class="text-xs font-bold text-accent-purple mb-1">3 YEARS</div>
+            <div class="text-sm font-semibold text-white mb-2">Agent-to-Agent (A2A) Bidding</div>
+            <p class="text-xs text-slate-300">Autonomous merchant agents bid directly inside consumer AI wallets and B2B RFPs with dynamic, personalized assortments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pillar-2" class="bg-slate-800/40 rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl space-y-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-700/60 pb-6">
+        <div>
+          <div class="inline-block px-3 py-1 rounded-lg bg-accent-purple/20 text-accent-purple text-xs font-bold uppercase tracking-wider mb-2">Topic 02</div>
+          <h3 class="text-2xl font-bold text-white">Multi-Agent Orchestration & Enterprise Workflows</h3>
+          <p class="text-slate-400 text-sm mt-1">Replacing linear, single-prompt LLM chains with cyclic directed graphs and human-in-the-loop governance.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-5 space-y-6">
+          <div class="bg-rose-950/30 rounded-2xl p-5 border border-rose-800/40">
+            <h4 class="text-xs font-bold text-rose-400 uppercase tracking-wider flex items-center gap-2 mb-2">
+              <span>⚠️ What (Problem Statement)</span>
+            </h4>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Gartner projects that <strong class="text-white">over 40% of agentic AI projects will be canceled by 2027</strong> due to escalating token costs, unclear ROI, and inadequate governance. Linear prompts fail when handling complex ERP queries, leading to context window overflow and infinite execution loops. Multi-agent systems (MAS) achieve <strong class="text-white">60% fewer errors, 40% faster execution, and 25% lower costs</strong>.
+            </p>
+          </div>
+
+          <div class="bg-slate-900/60 rounded-2xl p-5 border border-slate-700/60 space-y-4">
+            <h4 class="text-xs font-bold text-accent-purple uppercase tracking-wider">🛠️ Orchestration Framework Comparison</h4>
+            <div class="space-y-3 text-xs">
+              <div class="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700">
+                <div class="font-bold text-white flex justify-between"><span>LangGraph</span> <span class="text-accent-emerald">Stateful Cyclic Graph</span></div>
+                <div class="text-slate-400 mt-1">Durable checkpointing & precise conditional routing. High resilience.</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700">
+                <div class="font-bold text-white flex justify-between"><span>CrewAI</span> <span class="text-accent-amber">Role-Based Agents</span></div>
+                <div class="text-slate-400 mt-1">Ideal for sequential tasks; higher token footprint due to prompt context.</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-slate-800/80 border border-slate-700">
+                <div class="font-bold text-white flex justify-between"><span>Packaged Suites</span> <span class="text-brand-400">Agentforce / Joule</span></div>
+                <div class="text-slate-400 mt-1">Native deep integration directly inside enterprise Data Clouds & ERPs.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6">
+          <div class="bg-slate-900/80 rounded-2xl p-5 border border-slate-700/60">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-sm font-semibold text-slate-200">Single-Agent vs Multi-Agent Efficiency Matrix</h4>
+              <span class="text-xs text-slate-400">Benchmark Index (100 = Baseline)</span>
+            </div>
+            <p class="text-xs text-slate-400 mb-4">
+              Multi-agent cyclic graphs drastically improve task accuracy, reduce token re-execution waste, and lower latency.
+            </p>
+            <div class="chart-container">
+              <canvas id="chartOrchestration"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-900/90 rounded-2xl p-6 border border-slate-700/60">
+        <h4 class="text-xs font-bold text-accent-emerald uppercase tracking-wider mb-4">🛣️ Company Resolution Roadmap (Path to Green)</h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+            <div class="text-xs font-bold text-brand-400 mb-1">6 MONTHS</div>
+            <div class="text-sm font-semibold text-white mb-2">Cyclic Graph State Management</div>
+            <p class="text-xs text-slate-300">Migrate from linear LLM chains to LangGraph cyclic graphs. Implement `TypedDict` state objects and durable state checkpointing.</p>
+          </div>
+          <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+            <div class="text-xs font-bold text-accent-amber mb-1">1 YEAR</div>
+            <div class="text-sm font-semibold text-white mb-2">Human-in-the-Loop & Governed RAG</div>
+            <p class="text-xs text-slate-300">Embed HITL interrupt primitives for high-value financial thresholds. Connect agents to audited metadata catalogs via MCP.</p>
+          </div>
+          <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+            <div class="text-xs font-bold text-accent-purple mb-1">3 YEARS</div>
+            <div class="text-sm font-semibold text-white mb-2">Enterprise Packaged Agent Fleets</div>
+            <p class="text-xs text-slate-300">Deploy enterprise suites like Salesforce Agentforce & SAP Joule to autonomously coordinate B2B tenders and procurement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pillar-3" class="bg-slate-800/40 rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl space-y-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-700/60 pb-6">
+        <div>
+          <div class="inline-block px-3 py-1 rounded-lg bg-accent-emerald/20 text-accent-emerald text-xs font-bold uppercase tracking-wider mb-2">Topic 03</div>
+          <h3 class="text-2xl font-bold text-white">Agentic Payments & Cryptographic Trust Layer</h3>
+          <p class="text-slate-400 text-sm mt-1">Replacing synchronous human CVV authentication with delegated intent mandates and machine-to-machine rails.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-5 space-y-6">
+          <div class="bg-rose-950/30 rounded-2xl p-5 border border-rose-800/40">
+            <h4 class="text-xs font-bold text-rose-400 uppercase tracking-wider flex items-center gap-2 mb-2">
+              <span>⚠️ What (Problem Statement)</span>
+            </h4>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Traditional payment rails rely on synchronous human interactive scans or passwords—infeasible for background agent purchases. Financial institutions anticipate a <strong class="text-white">78% surge in agentic fraud</strong>. Card networks face broken liability chains if an agent purchases beyond user intent, creating massive chargeback exposure across fragmented protocols (Visa TAP, Mastercard Agent Pay, Stripe MPP, x402, AP2).
+            </p>
+          </div>
+
+          <div class="bg-slate-900/60 rounded-2xl p-5 border border-slate-700/60 space-y-3">
+            <h4 class="text-xs font-bold text-accent-emerald uppercase tracking-wider">🔒 Cryptographic Mandate Architecture (AP2 Standard)</h4>
+            <div class="space-y-2 text-xs text-slate-300">
+              <div class="p-2.5 rounded-lg bg-slate-800 border border-slate-700 flex items-center gap-3">
+                <span class="text-lg">1️⃣</span>
+                <div>
+                  <strong class="text-white">Intent Mandate:</strong> Signed by user's wallet with explicit spend caps and category restrictions.
+                </div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-slate-800 border border-slate-700 flex items-center gap-3">
+                <span class="text-lg">2️⃣</span>
+                <div>
+                  <strong class="text-white">Cart Mandate:</strong> Signed by merchant, cryptographically binding specific SKUs, taxes, and prices.
+                </div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-slate-800 border border-slate-700 flex items-center gap-3">
+                <span class="text-lg">3️⃣</span>
+                <div>
+                  <strong class="text-white">Payment Mandate:</strong> Network links funding source to the matched Intent + Cart hash.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6">
+          <div class="bg-slate-900/80 rounded-2xl p-5 border border-slate-700/60">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-sm font-semibold text-slate-200">Agentic Payment Settlement Rails Landscape</h4>
+              <span class="text-xs text-slate-400">Share of Micro & Enterprise Settlement (%)</span>
+            </div>
+            <p class="text-xs text-slate-400 mb-4">
+              Traditional card networks dominate retail, while HTTP 402 + stablecoin rails dominate high-frequency machine-to-machine streaming.
+            </p>
+            <div class="chart-container">
+              <canvas id="chartPayments"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-900/90 rounded-2xl p-6 border border-slate-700/60">
+        <h4 class="text-xs font-bold text-accent-emerald uppercase tracking-wider mb-4">🛣️ Company Resolution Roadmap (Path to Green)</h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+            <div class="text-xs font-bold text-brand-400 mb-1">6 MONTHS</div>
+            <div class="text-sm font-semibold text-white mb-2">Processor Managed Credentials</div>
+            <p class="text-xs text-slate-300">Integrate Stripe MPP Shared Payment Tokens (SPTs) with pre-budgeted limits. Update processing terms to define agent error liability.</p>
+          </div>
+          <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+            <div class="text-xs font-bold text-accent-amber mb-1">1 YEAR</div>
+            <div class="text-sm font-semibold text-white mb-2">AP2 Cryptographic Intent Mandates</div>
+            <p class="text-xs text-slate-300">Deploy FIDO-governed AP2 mandates (Intent, Cart, Payment) to eliminate chargebacks with tamper-proof user consent chains.</p>
+          </div>
+          <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+            <div class="text-xs font-bold text-accent-purple mb-1">3 YEARS</div>
+            <div class="text-sm font-semibold text-white mb-2">M2M Micro-Streaming & Stablecoins</div>
+            <p class="text-xs text-slate-300">Adopt HTTP 402 (x402 protocol) with USDC on Base for sub-dollar API and compute streaming micro-transactions without card fee friction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pillar-4" class="bg-slate-800/40 rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl space-y-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-700/60 pb-6">
+        <div>
+          <div class="inline-block px-3 py-1 rounded-lg bg-accent-amber/20 text-accent-amber text-xs font-bold uppercase tracking-wider mb-2">Topic 04</div>
+          <h3 class="text-2xl font-bold text-white">Legal Identity, KYA (Know Your Agent) & Liability</h3>
+          <p class="text-slate-400 text-sm mt-1">Establishing enforceable human operator accountability and mandatory risk tiering under FTC & AI AGENT Act rules.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-5 space-y-6">
+          <div class="bg-rose-950/30 rounded-2xl p-5 border border-rose-800/40">
+            <h4 class="text-xs font-bold text-rose-400 uppercase tracking-wider flex items-center gap-2 mb-2">
+              <span>⚠️ What (Problem Statement)</span>
+            </h4>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              AI agents cannot legally serve as "customers" under BSA/AML laws. Security firms report <strong class="text-white">97% of enterprises suffered AI attacks in 2025</strong> ($4.5M avg direct loss). The FTC's July 2026 ruling declared intentional agent steering/hallucinations a deceptive practice under Section 5. The proposed AI AGENT Act (S.5051) mandates linking every agent to a verifiable human operator.
+            </p>
+          </div>
+
+          <div class="bg-slate-900/60 rounded-2xl p-5 border border-slate-700/60 space-y-3">
+            <h4 class="text-xs font-bold text-accent-amber uppercase tracking-wider">🛡️ The 6-Layer KYA Governance Model</h4>
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <div class="p-2 bg-slate-800 rounded border border-slate-700 text-slate-300"><span class="text-brand-400 font-bold">1. Identity</span> persistent ID</div>
+              <div class="p-2 bg-slate-800 rounded border border-slate-700 text-slate-300"><span class="text-brand-400 font-bold">2. Auth</span> mTLS/Tokens</div>
+              <div class="p-2 bg-slate-800 rounded border border-slate-700 text-slate-300"><span class="text-brand-400 font-bold">3. Scope</span> Least Privilege</div>
+              <div class="p-2 bg-slate-800 rounded border border-slate-700 text-slate-300"><span class="text-brand-400 font-bold">4. Policy</span> Policy Engine</div>
+              <div class="p-2 bg-slate-800 rounded border border-slate-700 text-slate-300"><span class="text-brand-400 font-bold">5. Anomaly</span> Behavior Scan</div>
+              <div class="p-2 bg-slate-800 rounded border border-slate-700 text-slate-300"><span class="text-brand-400 font-bold">6. Audit</span> Immutable Logs</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6">
+          <div class="bg-slate-900/80 rounded-2xl p-5 border border-slate-700/60">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-sm font-semibold text-slate-200">Enterprise Agent Risk Tiering & Escalation Profile</h4>
+              <span class="text-xs text-slate-400">Action Distribution (%)</span>
+            </div>
+            <p class="text-xs text-slate-400 mb-4">
+              Tier 3 actions require mandatory real-time biometric identity verification (IDV) of the human operator.
+            </p>
+            <div class="chart-container">
+              <canvas id="chartKYA"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-900/90 rounded-2xl p-6 border border-slate-700/60">
+        <h4 class="text-xs font-bold text-accent-emerald uppercase tracking-wider mb-4">🛣️ Company Resolution Roadmap (Path to Green)</h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+            <div class="text-xs font-bold text-brand-400 mb-1">6 MONTHS</div>
+            <div class="text-sm font-semibold text-white mb-2">Agent Inventory & Risk Tiering</div>
+            <p class="text-xs text-slate-300">Audit all agents into Tiers 0-3. Eliminate shared credentials and bind every workflow to an identified human legal sponsor.</p>
+          </div>
+          <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+            <div class="text-xs font-bold text-accent-amber mb-1">1 YEAR</div>
+            <div class="text-sm font-semibold text-white mb-2">6-Layer KYA & Dynamic IDV Triggers</div>
+            <p class="text-xs text-slate-300">Deploy Persona IDV integration to trigger biometric selfie checks on the human operator's phone before Tier 3 financial execution.</p>
+          </div>
+          <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+            <div class="text-xs font-bold text-accent-purple mb-1">3 YEARS</div>
+            <div class="text-sm font-semibold text-white mb-2">On-Chain ERC-8004 Reputation Ledger</div>
+            <p class="text-xs text-slate-300">Utilize decentralized identity ledgers (ERC-8004) and "RNWY Scores" to validate agent trust metrics across B2B market networks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pillar-5" class="bg-slate-800/40 rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xl space-y-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-700/60 pb-6">
+        <div>
+          <div class="inline-block px-3 py-1 rounded-lg bg-accent-rose/20 text-accent-rose text-xs font-bold uppercase tracking-wider mb-2">Topic 05</div>
+          <h3 class="text-2xl font-bold text-white">Agentic Pricing Models & Yield Management</h3>
+          <p class="text-slate-400 text-sm mt-1">Navigating the breakdown of per-seat SaaS, avoiding the "token trap," and setting pricing guardrails.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-5 space-y-6">
+          <div class="bg-rose-950/30 rounded-2xl p-5 border border-rose-800/40">
+            <h4 class="text-xs font-bold text-rose-400 uppercase tracking-wider flex items-center gap-2 mb-2">
+              <span>⚠️ What (Problem Statement)</span>
+            </h4>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Charging "per seat" rapidly collapses when algorithms perform thousands of automated background calls, while raw API metering creates a dangerous <strong class="text-white">"token trap"</strong> of runaway customer bills. In retail, unconstrained pricing agents risk severe margin loss through hallucinated discounts and unexpected competitive price death spirals.
+            </p>
+          </div>
+
+          <div class="bg-slate-900/60 rounded-2xl p-5 border border-slate-700/60 space-y-3">
+            <h4 class="text-xs font-bold text-accent-rose uppercase tracking-wider">📊 Pricing Architecture Shift</h4>
+            <div class="space-y-2 text-xs text-slate-300">
+              <div class="p-2.5 rounded bg-slate-800 border border-slate-700">
+                <span class="text-rose-400 font-bold">Legacy SaaS:</span> Per-Seat Licenses (Broken by AI speed)
+              </div>
+              <div class="p-2.5 rounded bg-slate-800 border border-slate-700">
+                <span class="text-accent-amber font-bold">Metered Overages:</span> Base sub + token usage (Token Trap risk)
+              </div>
+              <div class="p-2.5 rounded bg-slate-800 border border-slate-700">
+                <span class="text-accent-emerald font-bold">Outcome-Based:</span> Billed per verified "Automated Resolution"
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6">
+          <div class="bg-slate-900/80 rounded-2xl p-5 border border-slate-700/60">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-sm font-semibold text-slate-200">SaaS Monetization Model Transition & Margin Stability</h4>
+              <span class="text-xs text-slate-400">Revenue Predictability Index</span>
+            </div>
+            <p class="text-xs text-slate-400 mb-4">
+              Outcome-based billing delivers superior revenue alignment compared to volatile API metering or legacy per-seat pricing.
+            </p>
+            <div class="chart-container">
+              <canvas id="chartPricing"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-900/90 rounded-2xl p-6 border border-slate-700/60">
+        <h4 class="text-xs font-bold text-accent-emerald uppercase tracking-wider mb-4">🛣️ Company Resolution Roadmap (Path to Green)</h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+            <div class="text-xs font-bold text-brand-400 mb-1">6 MONTHS</div>
+            <div class="text-sm font-semibold text-white mb-2">Margin Guardrails & Hybrid Billing</div>
+            <p class="text-xs text-slate-300">Enforce absolute cost-plus price floors and change-velocity caps outside LLM logic. Implement hybrid base + metered subscription billing.</p>
+          </div>
+          <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+            <div class="text-xs font-bold text-accent-amber mb-1">1 YEAR</div>
+            <div class="text-sm font-semibold text-white mb-2">Outcome-Based Resolution Billing</div>
+            <p class="text-xs text-slate-300">Transition SaaS billing to verified business outputs (e.g., per resolved ticket or accepted B2B RFP), aligning vendor ROI with buyer value.</p>
+          </div>
+          <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+            <div class="text-xs font-bold text-accent-purple mb-1">3 YEARS</div>
+            <div class="text-sm font-semibold text-white mb-2">Autonomous DoubleML Yield Management</div>
+            <p class="text-xs text-slate-300">Deploy Double Machine Learning (DoubleML) demand elasticity models for real-time yield optimization and counter-bidding within safety margins.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-slate-950 border-t border-slate-800 py-8 mt-16 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="font-medium text-slate-400">Analyst Report 2026: AI Agents Delivering Real-World Impact at Scale in Agentic Commerce</p>
+      <p class="mt-1">Generated strictly adhering to Single-File Canvas Rendering & Protocol Validation Standards.</p>
+    </div>
+  </footer>
+
+  <script>
+    function wrapLabel(str, maxChars = 16) {
+      if (typeof str !== 'string' || str.length <= maxChars) return str;
+      const words = str.split(' ');
+      const lines = [];
+      let currentLine = '';
+      words.forEach(word => {
+        if ((currentLine + ' ' + word).trim().length > maxChars) {
+          if (currentLine) lines.push(currentLine.trim());
+          currentLine = word;
+        } else {
+          currentLine += (currentLine ? ' ' : '') + word;
+        }
+      });
+      if (currentLine) lines.push(currentLine.trim());
+      return lines.length > 1 ? lines : str;
+    }
+
+    const defaultTooltipConfig = {
+      callbacks: {
+        title: function(tooltipItems) {
+          const item = tooltipItems[0];
+          let label = item.chart.data.labels[item.dataIndex];
+          if (Array.isArray(label)) {
+            return label.join(' ');
+          } else {
+            return label;
+          }
+        }
+      }
+    };
+
+    const catalogRawLabels = ['In-Chat ACP Checkout', 'Embedded Site Handoff', 'Web Scraped Catalog', 'UCP Protocol Manifest'];
+    const catalogWrappedLabels = catalogRawLabels.map(l => wrapLabel(l));
+
+    const ctxCatalog = document.getElementById('chartCatalog').getContext('2d');
+    new Chart(ctxCatalog, {
+      type: 'bar',
+      data: {
+        labels: catalogWrappedLabels,
+        datasets: [
+          {
+            label: 'Conversion Rate Multiplier (vs In-Chat Baseline)',
+            data: [1.0, 3.2, 0.8, 3.8],
+            backgroundColor: ['#f43f5e', '#3b82f6', '#f59e0b', '#10b981'],
+            borderRadius: 8
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: defaultTooltipConfig
+        },
+        scales: {
+          y: {
+            grid: { color: '#334155' },
+            ticks: { color: '#94a3b8' },
+            title: { display: true, text: 'Relative Conversion Rate', color: '#cbd5e1' }
+          },
+          x: {
+            grid: { display: false },
+            ticks: { color: '#94a3b8' }
+          }
+        }
+      }
+    });
+
+    const orchRawLabels = ['Task Completion Speed', 'Error Reduction Rate', 'Compute Token Savings', 'Context Window Buffer'];
+    const orchWrappedLabels = orchRawLabels.map(l => wrapLabel(l));
+
+    const ctxOrch = document.getElementById('chartOrchestration').getContext('2d');
+    new Chart(ctxOrch, {
+      type: 'radar',
+      data: {
+        labels: orchWrappedLabels,
+        datasets: [
+          {
+            label: 'Single-Agent LLM Chain',
+            data: [45, 30, 40, 35],
+            borderColor: '#f43f5e',
+            backgroundColor: 'rgba(244, 63, 94, 0.2)',
+            pointBackgroundColor: '#f43f5e'
+          },
+          {
+            label: 'Multi-Agent Cyclic Graph (LangGraph)',
+            data: [85, 90, 80, 95],
+            borderColor: '#10b981',
+            backgroundColor: 'rgba(16, 185, 129, 0.2)',
+            pointBackgroundColor: '#10b981'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { labels: { color: '#cbd5e1' } },
+          tooltip: defaultTooltipConfig
+        },
+        scales: {
+          r: {
+            grid: { color: '#334155' },
+            pointLabels: { color: '#cbd5e1', font: { size: 11 } },
+            ticks: { display: false }
+          }
+        }
+      }
+    });
+
+    const payRawLabels = ['Card Network Managed Tokens', 'AP2 Verifiable Mandates', 'HTTP 402 Stablecoin Micro-Streaming', 'Legacy Unrestricted API Cards'];
+    const payWrappedLabels = payRawLabels.map(l => wrapLabel(l));
+
+    const ctxPayments = document.getElementById('chartPayments').getContext('2d');
+    new Chart(ctxPayments, {
+      type: 'doughnut',
+      data: {
+        labels: payWrappedLabels,
+        datasets: [{
+          data: [35, 40, 20, 5],
+          backgroundColor: ['#3b82f6', '#10b981', '#8b5cf6', '#f43f5e'],
+          borderWidth: 0
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom', labels: { color: '#cbd5e1', boxWidth: 12 } },
+          tooltip: defaultTooltipConfig
+        }
+      }
+    });
+
+    const kyaRawLabels = ['Tier 0 Read-Only Info', 'Tier 1 Low-Risk Cart Edit', 'Tier 2 Medium Pre-Approved Order', 'Tier 3 High Financial Execution'];
+    const kyaWrappedLabels = kyaRawLabels.map(l => wrapLabel(l));
+
+    const ctxKYA = document.getElementById('chartKYA').getContext('2d');
+    new Chart(ctxKYA, {
+      type: 'bar',
+      data: {
+        labels: kyaWrappedLabels,
+        datasets: [{
+          label: 'Percent of Total Workflows',
+          data: [40, 35, 18, 7],
+          backgroundColor: '#f59e0b',
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: defaultTooltipConfig
+        },
+        scales: {
+          x: {
+            grid: { color: '#334155' },
+            ticks: { color: '#94a3b8' }
+          },
+          y: {
+            grid: { display: false },
+            ticks: { color: '#94a3b8' }
+          }
+        }
+      }
+    });
+
+    const priceRawLabels = ['Legacy Per-Seat Billing', 'Raw API Metering (Token Trap)', 'Outcome-Based Resolution Billing'];
+    const priceWrappedLabels = priceRawLabels.map(l => wrapLabel(l));
+
+    const ctxPricing = document.getElementById('chartPricing').getContext('2d');
+    new Chart(ctxPricing, {
+      type: 'line',
+      data: {
+        labels: priceWrappedLabels,
+        datasets: [{
+          label: 'Customer Retention & Margin Alignment Score',
+          data: [30, 45, 92],
+          borderColor: '#06b6d4',
+          backgroundColor: 'rgba(6, 182, 212, 0.15)',
+          fill: true,
+          tension: 0.3,
+          pointRadius: 6,
+          pointBackgroundColor: '#06b6d4'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: defaultTooltipConfig
+        },
+        scales: {
+          y: {
+            grid: { color: '#334155' },
+            ticks: { color: '#94a3b8' }
+          },
+          x: {
+            grid: { display: false },
+            ticks: { color: '#94a3b8' }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
